@@ -7,9 +7,6 @@ from sitechecker.checker import site_is_online
 def main():
     user_args = read_user_cli_args()
     urls = user_args.urls
-    if not urls:
-        print("Insira a URL")
-        sys.exit(1)
     _site_check(urls)
 
 def _site_check(urls):
