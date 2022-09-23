@@ -15,3 +15,11 @@ def read_user_cli_args():
         help="Insira um ou mais URLs"
     )
     return parser.parse_args()
+
+def display_check_result(result, url, error=""):
+    """Mostra o resultado do teste de conectividade"""
+    print(f'O status da "{url}" é:', end=" ")
+    if result:
+        print('"Online!" 👍')
+    else:
+        print(f'"Offline?" 👎 \n  Erro: "{error}"')
