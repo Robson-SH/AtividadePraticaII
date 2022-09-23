@@ -2,9 +2,7 @@ from http.client import HTTPConnection
 from urllib.parse import urlparse
 
 def site_is_online(url, timeout=2):
-    # Retorna verdadeiro se o site estiver online
-    # Senão, retorna uma exception
-    #---------------------------------------------
+    """Retorna verdadeiro se o site estiver online ou retorna uma exception se estiver offline"""
     #Define uma exception genérica
     error = Exception("unknown error")
     #Testa apenas para o host
